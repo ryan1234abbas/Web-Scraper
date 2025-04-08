@@ -1,12 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options  # Import Options for headless mode
 from bs4 import BeautifulSoup
 import time
 
 def scrape_website(website):
     print("Launching browser")  
     chrome_driver_path = "/Users/koshabbas/Downloads/chromedriver-mac-x64/chromedriver"
-    options = webdriver.ChromeOptions()
+    options = Options()
+    options.headless = True  
+
     driver = webdriver.Chrome(service = Service(chrome_driver_path), options = options)
     
     try:
