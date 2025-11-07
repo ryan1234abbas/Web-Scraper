@@ -1,0 +1,9 @@
+streamlit
+selenium
+webdriver-manager
+langchain
+langchain_ollama
+beautifulsoup4
+lxml
+html5lib
+python-dotenv
